@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+</head>
+
+<body>
+    <div class="header">
+        <div class="grid wide header-c">
+            <a href="../index.html" class="header-icon">
+                <img src="../assets/bot.png" alt="" class="header-icon__img">
+                <span class="header-icon__name">Paff Wandering</span>
+            </a>
+            <ul class="header-categories">
+                <li class="header-categories__item"><a href="../index.html">Home</a>
+                </li>
+                <li class="header-categories__item"><a href="../animeWebgenres/index.html">Genre</a>
+                </li>
+                <li class="header-categories__item"><a href="">Favourites</a>
+                </li>
+                <li class="header-categories__item random-btn"><a href="index.html" class="random-link">Random anime</a>
+                </li>
+                <li class="header-categories__item"><a href="">Contact</a>
+                </li>
+            </ul>
+            <ul class="header-interact">
+                <li class="header-interact__item header-interact-search">
+                    <input type="text" class="header-interact__item-search search-unhide" placeholder="Enter anime name...">
+                    <i class="fas fa-search search-unhide"></i>
+                    <ul class="header-interact-search__list search-unhide">
+                       
+                        <img class="waiting-for-search search-unhide" src="../assets/83223258-unscreen.gif" alt="">
+
+                    </ul>
+                </li>
+                <li class="header-interact__item">
+                    <i class="fas fa-bell"></i>
+                </li>
+                <li class="header-interact__item">
+                    <i class='bx bx-menu'></i>
+                </li>
+                <li class="header-interact__item">
+                    <img src="../assets/FB5NgzrVgAMm3ey.png" alt="" class="header-interact__item-user">
+                </li>
+            </ul>
+        </div>
+        <div class="menu-filter">
+            
+        </div>
+        <ul class="menu-nav">
+            <li class="menu-nav__item"><a href="../index.html">
+                <i class='bx bx-home'></i>
+                Home</a>
+            </li>
+            <li class="menu-nav__item"><a href="../animeWebgenres/index.html">
+                <i class='bx bx-tag-alt' ></i>
+                Genre</a>
+            </li>
+            <li class="menu-nav__item"><a href="">
+                <i class='bx bx-heart' ></i>
+                Favorites</a>
+            </li>
+            <li class="menu-nav__item random-btn"><a href="index.html" class="random-link">
+                <i class='bx bx-shuffle' ></i>
+                Random anime</a>
+            </li>
+            <li class="menu-nav__item"><a href="">
+                <i class='bx bx-phone' ></i>
+                Contact</a>
+            </li>
+
+            <li class="menu-nav__item"><a href="">
+                <img src="../assets/FB5NgzrVgAMm3ey.png" alt="" class="header-interact__item-user">
+                Miku-anmigoi</a>
+            </li>
+        </ul>
+    </div>
+    <div class="root-2">
+        <div class="grid wide">
+            <div class="row r2-watch">
+                <div id="video" class="col c-9 r2-video s-12">
+                    <video controls autoplay width="100%"  class="video" poster=""
+                        src=""></video>
+                </div>
+                <div class="col c-3 r2-nav s-12">
+                    <div class="ep-nav">
+                        <div class="ep-nav__top">
+                            <span class="ep-nav__top--eplist active">
+                                List of episodes
+                            </span>
+                            <span class="ep-nav__top--comments">
+                                Comments
+                            </span>
+                        </div>
+                        <div class="ep-nav__bottom">
+                            <span class="ep-nav__bottom--ep">
+                                11 episodes in total
+                            </span>
+                            <span class="ep-nav__bottom--currentep">
+                                Current: ep 1
+                            </span>
+                        </div>
+                    </div>
+                    <ul class="ep-list">
+                    </ul>
+
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col c-9 r2-animeinfo">
+                    <div class="animeinfo-option">
+                        <span>Choose your language</span>
+                        <div class="animeinfo-option__list">
+                            <span class="">English</span>
+                            <span class="active">Italia</span>
+                        </div>
+                        <div class="animeinfo-option__subteam">
+                            <span class="active subteam-options dreamsub">
+                                dreamsub
+                            </span>
+                            <span class=" subteam-options animeworld">
+                                animeworld
+                            </span>
+                            <span class=" subteam-options hide gogoanime">
+                                gogoanime
+                            </span>
+                        </div>
+                    </div>
+                    <div class="animeinfo-name">
+                        
+                    </div>
+                    <div class="animeinfo-interact">
+                        <div class="animeinfo-interact__like">
+                            <i class='bx bx-heart'></i>
+                            <span class="">like</span>
+                        </div>
+                        <div class="animeinfo-interact__follow">
+                            <i class='bx bx-bell'></i>
+                            <span>Follow</span>
+                        </div>
+                        <div class="animeinfo-interact__share">
+                            <i class='bx bx-share'></i>
+                            <span>Share</span>
+                        </div>
+                    </div>
+                    <div class="animeinfo-info">
+                        <span class="animeinfo-genres">
+                            
+                        </span>
+                        <span class="animeinfo-status">
+                            
+                        </span>
+                        <span class="animeinfo-season">
+                            
+                        </span>
+                        <span class="animeinfo-des">
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="grid wide">
+            <span class="footer-text">
+                2021 copyright Paff Wandering
+            </span>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+    <script src="../base.js"></script>
+</body>
+
+</html>

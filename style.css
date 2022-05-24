@@ -1,0 +1,1041 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+/* root 1 */
+
+:root {
+    --black-color: #000;
+    --gray-color: rgb(17, 17, 17);
+    --primary-color: #ffbe76;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--gray-color);
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* nav bar */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background-color: var(--black-color);
+    z-index: 50;
+    display: flex;
+}
+
+.header-c {
+    background-color: var(--black-color);
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-icon {
+    display: flex;
+    align-items: center;
+}
+
+.header-icon__img {
+    height: 24px;
+    border-radius: 50%;
+    width: 24px;
+    margin-right: 10px;
+}
+
+.header-icon__name {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.header-categories {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-categories__item a {
+    color: #bec1c2;
+    font-size: 1.6rem;
+    margin: 0 14px;
+}
+
+.header-categories__item:hover a {
+    color: #fff;
+}
+
+.header-categories__item.active a {
+    color: var(--primary-color);
+}
+
+.header-interact {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.header-interact__item {
+    font-size: 1.6rem;
+    margin: 0 14px;
+    display: flex;
+    align-items: center;
+}
+
+.header-interact__item-search {
+    background-color: #1f1f1f;
+    border: none;
+    border-radius: 50px;
+    height: 30px;
+    width: 100%;
+    padding-left: 20px;
+    color: #fff;
+}
+
+.header-interact-search {
+    position: relative;
+}
+
+.header-interact-search__list {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background-color: #202020;
+    z-index: 30;
+    width: 400px;
+    min-height: 400px;
+    padding: 10px;
+    padding-bottom: 0;
+    border-radius: 5px;
+    box-shadow: 4px 4px 6px rgba(85, 84, 84, 0.5);
+    display: none;
+    animation: scaleY 0.2s ease-in-out;
+    transform-origin: calc(100% - 22px) 0%;
+}
+
+.header-interact-search__item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(156, 156, 156);
+    animation: appear 0.2s linear;
+}
+
+.header-interact-search__item-link {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+}
+
+.header-interact-search__item:hover {
+    transform: scale(103%);
+    cursor: pointer;
+}
+
+.header-interact-search__item:hover .header-interact-search__item-name {
+    color: var(--primary-color);
+}
+
+.header-interact-search__item:last-child {
+    border-bottom: none;
+    padding-bottom: none;
+}
+
+.header-interact-search__item-img {
+    height: 80px;
+    border-radius: 5px;
+}
+
+.search__item-contain {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.header-interact-search__item-name {
+    font-size: 1.7rem;
+    text-overflow: hidden;
+    overflow: hidden;
+    display: block;
+    line-height: 2rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    color: #fff;
+    transition: color 0.1s ease-in;
+}
+
+.header-interact-search__item-status {
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    color: #bec1c2;
+}
+
+.header-interact__item-search:focus {
+    outline: none;
+}
+
+.fa-search {
+    color: #9e9c9c;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-80%, -50%)
+}
+
+.fa-bell {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.header-interact__item:nth-child(3) {
+    display: none;
+}
+
+.bx-menu {
+    color: #fff;
+    font-size: 3rem;
+}
+
+.header-interact__item-user {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+}
+
+
+/* body */
+
+.body-spotlight {
+    height: 420px;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.body-spotlight__detail {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, #111111, transparent);
+    width: 30%;
+    height: 100%;
+    justify-content: center;
+    /* position: absolute;
+    top: 50%;
+    transform: translateY(-50%); */
+}
+
+.body-spotlight__filter {
+    background-image: linear-gradient(to left, #111111, transparent);
+    width: 20%;
+}
+
+.body-spotlight__detail-name {
+    color: #fff;
+    font-weight: 700;
+    font-size: 3.8rem;
+    line-height: 5.2rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    width: 400px;
+}
+
+.body-spotlight__detail-status {
+    margin-top: 10px;
+    color: var(--primary-color);
+    font-size: 2.2rem;
+}
+
+.body-spotlight__detail-btn {
+    background-color: #fff;
+    border-radius: 5px;
+    height: 30px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.fa-play {
+    font-size: 1.6rem;
+}
+
+.body-spotlight__detail-btn__text {
+    font-size: 1.3rem;
+    margin-left: 10px;
+}
+
+/* popular */
+.body-popular {
+    height: fit-content;
+    max-width: 1200px;
+    margin-top: 44px;
+    position: relative;
+}
+
+.body-main::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-image: linear-gradient(to top, #111111, transparent);
+}
+
+.body-popular__item {
+    margin: 0 25px;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    border-radius: 5px;
+    animation: appear 1s ease;
+    position: relative;
+    overflow: hidden;
+    filter: brightness(90%);
+}
+
+.body-popular__item:hover .body-popular__item-filter {
+    height: 100%;
+}
+
+.body-popular__item:first-child {
+    margin-left: 0;
+}
+
+.body-nav {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.body-title {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    display: flex;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+/* slider 1 */
+.owl-nav .owl-prev:hover,
+.owl-nav .owl-next:hover {
+    background: none !important;
+}
+
+.owl-nav {
+    width: 98.4%;
+    position: absolute;
+    bottom: 104%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-slider-btn {
+    display: none;
+}
+
+/* loading */
+.loading {
+    height: 300px;
+    width: 1200px;
+    animation: appear 0.4s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading i {
+    font-size: 4rem;
+    color: #fff;
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* transform: rotate(3deg); */
+    /* transform: rotate(0.3rad);/ */
+    /* transform: rotate(3grad); */
+    /* transform: rotate(.03turn);  */
+}
+
+/* anime popular box */
+.body-popular__item-filter {
+    width: 100%;
+    height: 0%;
+    overflow: hidden;
+    background-color: rgba(49, 49, 49, 0.692);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: 0;
+}
+
+.body-popular__item-filter i {
+    color: #fff;
+    font-size: 5rem;
+    margin: 110px 0 10px;
+}
+
+.body-popular__item-filter i:hover {
+    color: rgb(116, 114, 114);
+}
+
+.body-popular__item-filter__name {
+    color: #fff;
+    font-size: 1.6rem;
+    text-align: center;
+    width: 98%;
+    flex: 1;
+}
+
+.body-popular__item-filter__status {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    text-align: center;
+    width: 96%;
+    margin-bottom: 3px;
+}
+
+/* body zone */
+.body-romcom {
+    margin-top: 0px;
+    min-height: 3000px;
+}
+
+/* nav body */
+.body-selection {
+    height: fit-content;
+    width: 80%;
+    overflow: wrap;
+    margin-top: 30px;
+    padding: 0;
+    display: flex;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+    animation: scaleY 0.2s ease-in-out;
+    transform-origin: calc(100% - 22px) 0%;
+}
+
+.body-selection__item {
+    width: fit-content;
+    color: #000;
+    background-color: #fff;
+    margin-right: 20px;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    padding: 0 10px;
+    align-items: center;
+    height: 30px;
+    transition: all 0.5s ease;
+    margin-bottom: 10px;
+    display: inline-flex;
+    white-space: nowrap;
+}
+
+.body-selection__item.active {
+    background-color: rgba(70, 69, 69, 0.61);
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.body-selection__item:hover {
+    background-color: rgba(70, 69, 69, 0.61);
+    color: #fff;
+    cursor: pointer;
+}
+
+/* box anime */
+.box-anime {
+    height: 300px;
+    border-radius: 5px;
+    margin-top: 30px;
+    transition: transform 0.1s ease;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    animation: appear 0.2s ease-in-out;
+}
+
+.box-anime:hover {
+    transform: scale(103%)
+}
+
+.box-anime__filter {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.781), transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.box-anime__name {
+    color: #fff;
+    display: block;
+    width: 96%;
+    font-size: 1.4rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.box-anime__status {
+    color: var(--primary-color);
+    width: 96%;
+    margin-bottom: 6px;
+}
+
+/* footer */
+.footer {
+    height: 50px;
+    background-color: #000000;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-text {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* loading filter */
+.filter-loading {
+    background-color: rgba(0, 0, 0, 0.575);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-loading i {
+    color: #fff;
+    font-size: 5rem;
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* transform: rotate(3deg); */
+    /* transform: rotate(0.3rad);/ */
+    /* transform: rotate(3grad); */
+    /* transform: rotate(.03turn);  */
+}
+
+.root-1 {
+    margin-top: 56px;
+}
+
+/* root 2 */
+.root-2 {
+    margin-top: 90px;
+}
+
+.r2-video {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.r2-nav {
+    height: 502px;
+    background-color: #111;
+    border-radius: 5px;
+    border: 1px solid #bec1c2;
+    display: flex !important;
+    flex-direction: column;
+}
+
+.ep-list {
+    margin-top: 0;
+    margin-top: 10px;
+    flex: 0.95;
+    list-style: none;
+    padding-left: 0;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.ep-list::-webkit-scrollbar {
+    display: none;
+}
+
+.ep-item {
+    color: #bec1c2;
+    font-size: 1.3rem;
+    margin: 10px;
+    padding-bottom: 4px;
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 10px;
+}
+
+.ep-item.active {
+    border-bottom: 1px solid var(--primary-color);
+    color: #fff;
+}
+
+.ep-item:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.ep-nav {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #fff;
+}
+
+.ep-nav__top span,
+.ep-nav__bottom span {
+    font-size: 1.2rem;
+    padding: 6px 0;
+    font-weight: 500;
+    color: #bec1c2;
+}
+
+.ep-nav__top span:hover {
+    cursor: pointer;
+}
+
+.ep-nav__top span.active {
+    border-bottom: 2px solid var(--primary-color);
+    color: #fff;
+}
+
+.ep-nav__top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+}
+
+.ep-nav__bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.r2-animeinfo {
+    height: fit-content;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.animeinfo-name {
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.animeinfo-interact {
+    display: flex;
+    margin-top: 20px;
+}
+
+.animeinfo-interact__like {
+    background-color: #e5525e;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 20px;
+    justify-content: center;
+}
+
+.animeinfo-interact__like i {
+    font-size: 2.2rem;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.animeinfo-interact__like span {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.animeinfo-interact__follow {
+    background-color: #0e6f6a;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 20px;
+    justify-content: center;
+}
+
+.animeinfo-interact__follow i {
+    font-size: 2.2rem;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.animeinfo-interact__follow span {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.animeinfo-interact__share {
+    background-color: #4267b2;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 20px;
+    justify-content: center;
+}
+
+.animeinfo-interact__share i {
+    font-size: 2.2rem;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.animeinfo-interact__share span {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.animeinfo-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.animeinfo-info span {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-top: 10px;
+}
+
+.animeinfo-option {
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+.animeinfo-option span {
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.animeinfo-option__list span {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.animeinfo-option__list span:hover {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.animeinfo-option__list span.active {
+    color: var(--primary-color);
+}
+
+.animeinfo-option__subteam {
+    margin-top: 6px;
+}
+
+.animeinfo-option__subteam span {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.animeinfo-option__subteam span:hover {
+    cursor: pointer;
+}
+
+.animeinfo-option__subteam span.active {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.hide {
+    display: none;
+}
+
+/* nav mobile */
+.menu-filter {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.575);
+    display: none;
+    animation: appear 0.2s ease-in;
+}
+
+.menu-nav {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 100vh;
+    left: 0;
+    width: 0;
+    z-index: 60;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px 20px 0px;
+    overflow: hidden;
+    transition: width 0.2s ease-in;
+}
+
+.menu-nav__item {
+    padding: 10px 0;
+}
+
+.menu-nav__item a {
+    font-size: 1.6rem;
+    color: #000;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+.menu-nav__item i {
+    font-size: 2.2rem;
+    color: #000;
+    margin-right: 10px;
+}
+
+.menu-nav__item img {
+    margin-right: 10px;
+}
+
+.menu-nav__item:last-child {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+}
+
+.menu-nav__item:last-child a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu-nav__item.active i,
+.menu-nav__item.active a {
+    color: var(--primary-color);
+}
+
+.menu-nav__item:hover i,
+.menu-nav__item:hover a {
+    color: var(--primary-color);
+}
+
+/* root 3 */
+.root-3 {
+    margin-top: 56px;
+}
+
+.genres-list {
+    width: 100%;
+    height: 300px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+}
+
+.genres-list::-webkit-scrollbar {
+    display: none;
+}
+
+.item-selects {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.search-main-body {
+    min-height: 51vh;
+}
+
+.search-tag {
+    outline: none;
+    border-radius: 5px;
+    height: 30px;
+}
+
+/* animation */
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scaleY {
+    from {
+        transform: scaleY(0%)
+    }
+
+    to {
+        transform: scaleY(100%)
+    }
+}
+
+@keyframes scaleY2 {
+    from {
+        transform: scaleY(100%)
+    }
+
+    to {
+        transform: scaleY(0%)
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .header-categories {
+        display: none;
+    }
+
+    .header-interact__item:nth-child(3) {
+        display: block;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .header-categories {
+        display: none;
+    }
+
+    .header-interact__item:nth-child(3) {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .body-spotlight {
+        display: none !important;
+    }
+
+    .header-icon span {
+        display: none;
+    }
+
+    .header-categories {
+        display: none;
+    }
+
+    .header-interact {
+        padding-left: 0;
+    }
+
+    .header-interact__item-search {
+        font-size: 1.2rem;
+    }
+
+    .header-interact__item:last-child {
+        display: none;
+    }
+
+    .header-icon__img {
+        height: 35px;
+        width: 35px;
+    }
+
+    .header-interact__item:nth-child(3) {
+        display: block;
+    }
+
+    .box-anime {
+        height: 250px;
+    }
+
+    .r2-watch {
+        height: fit-content;
+    }
+
+    .r2-nav {
+        height: 250px;
+    }
+
+    .header-interact-search__list {
+        width: 350px;
+        right: -120px;
+    }
+}

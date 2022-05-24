@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miku's Anime</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <div class="header">
+        <div class="grid wide header-c">
+            <div class="header-icon">
+                <img src="assets/bot.png" alt="" class="header-icon__img">
+                <span class="header-icon__name">Paff Wandering</span>
+            </div>
+            <ul class="header-categories">
+                <li class="header-categories__item active"><a href="">Home</a>
+                </li>
+                <li class="header-categories__item"><a href="./animeWebgenres/index.html">Genre</a>
+                </li>
+                <li class="header-categories__item"><a href="">Favourites</a>
+                </li>
+                <li class="header-categories__item random-btn"><a href="animeWebvideo/index.html"
+                        class="random-link">Random anime</a>
+                </li>
+                <li class="header-categories__item"><a href="">Contact</a>
+                </li>
+            </ul>
+            <ul class="header-interact">
+                <li class="header-interact__item header-interact-search">
+                    <input type="text" class="header-interact__item-search search-unhide"
+                        placeholder="Enter anime name...">
+                    <i class="fas fa-search search-unhide"></i>
+                    <ul class="header-interact-search__list search-unhide">
+
+                        <img class="waiting-for-search search-unhide" src="assets/83223258-unscreen.gif" alt="">
+
+                    </ul>
+                </li>
+                <li class="header-interact__item">
+                    <i class="fas fa-bell"></i>
+                </li>
+                <li class="header-interact__item">
+                    <i class='bx bx-menu'></i>
+                </li>
+                <li class="header-interact__item">
+                    <img src="assets/FB5NgzrVgAMm3ey.png" alt="" class="header-interact__item-user">
+                </li>
+            </ul>
+        </div>
+        <div class="menu-filter">
+
+        </div>
+        <ul class="menu-nav">
+            <li class="menu-nav__item active"><a href="">
+                    <i class='bx bx-home'></i>
+                    Home</a>
+            </li>
+            <li class="menu-nav__item"><a href="./animeWebgenres/index.html">
+                    <i class='bx bx-tag-alt'></i>
+                    Genre</a>
+            </li>
+            <li class="menu-nav__item"><a href="">
+                    <i class='bx bx-heart'></i>
+                    Favorites</a>
+            </li>
+            <li class="menu-nav__item random-btn"><a href="animeWebvideo/index.html" class='random-link'>
+                    <i class='bx bx-shuffle'></i>
+                    Random anime</a>
+            </li>
+            <li class="menu-nav__item"><a href="">
+                    <i class='bx bx-phone'></i>
+                    Contact</a>
+            </li>
+
+            <li class="menu-nav__item"><a href="">
+                    <img src="assets/FB5NgzrVgAMm3ey.png" alt="" class="header-interact__item-user">
+                    Miku-anmigoi</a>
+            </li>
+        </ul>
+    </div>
+    <div class="root-1">
+
+        <div class="body grid wide">
+            <div class="row">
+                <div class="body-spotlight c-12 s-12"
+                    style="background-image: url(https://s4.anilist.co/file/anilistcdn/media/anime/banner/17074-4tGsvEIjba22.jpg)">
+                    <div class="body-spotlight__detail">
+                        <span class="body-spotlight__detail-name">
+                            Monogatari Series: Second Season
+                        </span>
+                        <span class="body-spotlight__detail-status">
+                            Finished
+                        </span>
+                        <a href="animeWebvideo/index.html" class="body-spotlight__detail-btn">
+                            <i class="fas fa-play"></i>
+                            <span class="body-spotlight__detail-btn__text">
+                                Watch now
+                            </span>
+                        </a>
+                    </div>
+                    <div class="body-spotlight__filter"></div>
+                </div>
+            </div>
+
+            <div class="body-main">
+                <div class="body-popular row">
+                    <div class="body-popular__slide-move owl-carousel owl-theme row no-gutters">
+
+                    </div>
+                    <div class="loading">
+                        <i class='bx bx-loader-alt'></i>
+                    </div>
+
+
+                    <div class="body-title">Most Popular</div>
+                </div>
+
+                <div class="row">
+                    <div class="body-selection col c-12 s-12">
+                        <span class="body-selection__item active" index="0">Rom-Com</span>
+                        <span class="body-selection__item" index="1">Action</span>
+                        <span class="body-selection__item" index="2">Adventure</span>
+                        <span class="body-selection__item" index="3">Comedy</span>
+                        <span class="body-selection__item" index="4">Drama</span>
+                        <span class="body-selection__item" index="5">Fantasy</span>
+                        <span class="body-selection__item" index="6">Slice of Life</span>
+                        <span class="body-selection__item" index="7">Shounen</span>
+                        <span class="body-selection__item" index="8">Shoujo</span>
+                    </div>
+                </div>
+
+                <div class="body-romcom">
+                    <div class="row main-body">
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-loading">
+            <i class='bx bx-loader-alt'></i>
+        </div>
+
+        <footer class="footer">
+            <div class="grid wide">
+                <span class="footer-text">
+                    2021 copyright Paff Wandering
+                </span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+    <script src="base.js"></script>
+</body>
+
+</html>
